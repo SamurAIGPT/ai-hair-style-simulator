@@ -1,8 +1,9 @@
-# 💇 AI Hairstyle Simulator — Open-Source Virtual Hair Makeover & Style Try-On SaaS
+# 💇 AI Hairstyle Simulator — Open-Source Virtual Hair Makeover & Style Try-On SaaS (Free YouCam Hair / HairStyle.ai Alternative)
 
-> **Try on new hairstyles and hair colors virtually in seconds with advanced AI.** A production-ready, self-hostable Next.js SaaS boilerplate built for salons, hair stylists, fashion brands, and DTC beauty apps. A free open-source alternative to paid hair editor tools — powered by the MuAPI AI engine.
+> **Try on new hairstyles and hair colors virtually before visiting the salon.** A production-ready, self-hostable Next.js SaaS boilerplate built for salons, hair stylists, fashion brands, and DTC beauty apps — replaces $20/mo hair try-on tools. A free open-source alternative to YouCam Hair, HairStyle.ai, and Hairstyle Lite — powered by the MuAPI AI engine.
 
-**Tech stack:** Next.js 16 (App Router) · Prisma · PostgreSQL · NextAuth (Google OAuth) · Stripe · Tailwind CSS · MuAPI · Webhook-backed async delivery
+**Tech stack:** Next.js 14 (App Router) · Prisma · PostgreSQL · NextAuth (Google OAuth) · Stripe · Tailwind CSS · MuAPI · Webhook-backed async delivery
+**Use cases:** Salon client styling consultations · Virtual hair makeover apps · Personal beauty planning · Hair product marketing · Barber shop previews · Beauty influencer tools · Hair color visualization · Interactive makeover widgets
 **Use cases:** Salon client styling consultations · Virtual hair makeover tools · Personal beauty planning · Hair product marketing · Barber shop previews · Interactive makeover widgets
 
 ![AI Hairstyle Simulator UI Preview](https://cdn.muapi.ai/data/2/759176684566/Screenshot_2026-05-27_203626.png)
