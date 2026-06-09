@@ -1,4 +1,5 @@
 const config = {
+  appName: "Ai Hair Style Simulator",
   auth: {
     google: {
       clientId: process.env.GOOGLE_CLIENT_ID,
