@@ -89,7 +89,7 @@ To successfully deploy and run, you must populate the following environment vari
 | **Stripe Billing** | `STRIPE_SECRET_KEY` | Get from Stripe Dashboard |
 | | `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Get from Stripe Dashboard |
 | | `STRIPE_WEBHOOK_SECRET` | Webhook secret for resolving credit purchases |
-| **AI Generation** | `MUAPIAPP_API_KEY` | Create an account and get key from [muapi.ai](https://muapi.ai) |
+| **AI Generation** | `MUAPIAPP_API_KEY` | Create an account and get key from [muapi.ai](https://muapi.ai?utm_source=github&utm_medium=readme&utm_campaign=ai-hair-style-simulator) |
 
 ### 🚀 Launching on Vercel: Step-by-Step
 
