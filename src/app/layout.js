@@ -20,8 +20,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full w-full dark" style={{ colorScheme: "dark" }}>
-      <body className={`${inter.variable} ${outfit.variable} h-full w-full flex flex-col antialiased bg-zinc-950 text-zinc-100 font-sans overflow-hidden`}>
+    <html lang="en" className={`${inter.variable} ${outfit.variable} h-full w-full dark`} style={{ colorScheme: "dark" }}>
+      <body className={`${inter.className} h-full w-full flex flex-col antialiased bg-zinc-950 text-zinc-100 font-sans overflow-hidden`}>
         <Providers>
           <Navbar />
           <div className="flex-1 flex flex-col overflow-hidden min-h-0">
