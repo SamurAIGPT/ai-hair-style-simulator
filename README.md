@@ -16,6 +16,8 @@
 
 > 🎨 **[Explore 50+ more open-source AI apps →](https://github.com/Anil-matcha/awesome-generative-ai-apps)**
 
+https://github.com/user-attachments/assets/6dfe24cf-ffff-4096-872a-d9c8fe0faf44
+
 ## 🌐 Project Details
 
 **GitHub Repository:** [github.com/SamurAIGPT/ai-hair-style-simulator](https://github.com/SamurAIGPT/ai-hair-style-simulator)
