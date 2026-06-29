@@ -15,12 +15,52 @@ export async function GET(req) {
     const id = searchParams.get("id");
 
     if (id) {
-      const creation = await prisma.hairStyle.findFirst({
+      let creation = await prisma.hairStyle.findFirst({
         where: { id, userId: session.user.id }
       });
       if (!creation) {
         return new NextResponse("Not Found", { status: 404 });
       }
+
+      const apiKey = config.ai.apiKey;
+      const hasApiKey = apiKey && !apiKey.includes("your_") && apiKey.trim() !== "";
+
+      if (creation.status === "processing" && creation.requestId && !creation.requestId.startsWith("mock_") && hasApiKey) {
+        try {
+          const checkRes = await fetch(`https://api.muapi.ai/api/v1/predictions/${creation.requestId}/result`, {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              "x-api-key": apiKey
+            }
+          });
+
+          if (checkRes.ok) {
+            const checkData = await checkRes.json();
+            const state = checkData.status || checkData.state;
+
+            if (state === "completed" || state === "succeeded") {
+              const outputs = checkData.outputs || [];
+              const outputUrl = outputs[0] || (typeof checkData.output === 'string' ? checkData.output : checkData.output?.urls?.get);
+
+              if (outputUrl) {
+                creation = await prisma.hairStyle.update({
+                  where: { id: creation.id },
+                  data: { status: "completed", resultImage: outputUrl }
+                });
+              }
+            } else if (state === "failed") {
+              creation = await prisma.hairStyle.update({
+                where: { id: creation.id },
+                data: { status: "failed" }
+              });
+            }
+          }
+        } catch (pollErr) {
+          console.error(`Bypass poll error for request ID ${creation.requestId}:`, pollErr);
+        }
+      }
+
       return NextResponse.json(creation);
     }
 
