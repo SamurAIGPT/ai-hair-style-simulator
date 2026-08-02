@@ -18,6 +18,11 @@
 
 https://github.com/user-attachments/assets/6dfe24cf-ffff-4096-872a-d9c8fe0faf44
 
+## Related Projects
+
+- [MuAPI image playground](https://muapi.ai/playground) — Try the image models used for virtual hairstyle previews.
+- [MuAPI specialized apps docs](https://muapi.ai/docs/specialized-apps) — Image transformation and enhancement workflows.
+
 ## 🌐 Project Details
 
 **GitHub Repository:** [github.com/SamurAIGPT/ai-hair-style-simulator](https://github.com/SamurAIGPT/ai-hair-style-simulator)
